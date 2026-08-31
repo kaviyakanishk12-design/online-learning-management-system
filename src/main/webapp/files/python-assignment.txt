@@ -1,0 +1,14 @@
+PYTHON FUNDAMENTALS AND PROBLEM SOLVING
+
+Course: Python Programming
+
+Instructions:
+1. Write a Python program to demonstrate variables and data types.
+2. Write programs using if-else statements.
+3. Write programs using for and while loops.
+4. Create functions to solve simple problems.
+5. Write clean and properly commented Python code.
+
+Maximum Marks: 50
+
+Due Date: 30-08-2026

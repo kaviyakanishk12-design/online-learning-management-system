@@ -1,0 +1,482 @@
+/* ===================================================
+   PROFESSIONAL LMS STYLE.CSS
+   GREEN THEME
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2E7D32;
+}
+
+.user {
+    font-weight: 500;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 70px);
+    background: #2E7D32;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 25px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #43A047;
+    padding-left: 35px;
+}
+
+.sidebar i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+    margin-left: 240px;
+    margin-top: 70px;
+    padding: 30px;
+}
+
+/* ================= DASHBOARD BANNER ================= */
+
+.dashboard-banner {
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.dashboard-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.banner-overlay h1 {
+    font-size: 46px;
+}
+
+.banner-overlay p {
+    font-size: 22px;
+    margin: 15px 0 25px;
+}
+
+.banner-btn,
+.btn {
+    display: inline-block;
+    background: #2E7D32;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.banner-btn:hover,
+.btn:hover {
+    background: #1B5E20;
+}
+
+/* ================= STATISTICS ================= */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card,
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.stat-card:hover,
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.stat-card i,
+.card i {
+    font-size: 42px;
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+
+.stat-card h2 {
+    color: #2E7D32;
+    margin-bottom: 5px;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+    margin: 30px 0 20px;
+    font-size: 28px;
+}
+
+/* ================= CONTINUE LEARNING ================= */
+
+.continue-card {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.continue-card img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 12px 0;
+}
+
+.progress-fill {
+    width: 65%;
+    height: 100%;
+    background: #2E7D32;
+    border-radius: 20px;
+}
+
+/* ================= QUICK ACCESS ================= */
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.quick-grid a {
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.quick-grid a:hover {
+    background: #2E7D32;
+    color: #fff;
+    transform: translateY(-6px);
+}
+
+.quick-grid i {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2E7D32;
+}
+
+.quick-grid a:hover i {
+    color: #fff;
+}
+
+/* ================= COURSES ================= */
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+.course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-body {
+    padding: 20px;
+}
+
+.course-body h2 {
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.buttons .btn {
+    flex: 1;
+    text-align: center;
+}
+
+/* ================= TABLES ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background: #2E7D32;
+    color: #fff;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ================= FORMS ================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background: #2E7D32;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1B5E20;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar a {
+        font-size: 0;
+        padding: 18px;
+        text-align: center;
+    }
+
+    .sidebar i {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .content {
+        margin-left: 70px;
+    }
+
+    .banner-overlay {
+        padding-left: 30px;
+    }
+
+    .banner-overlay h1 {
+        font-size: 30px;
+    }
+
+    .continue-card {
+        flex-direction: column;
+    }
+
+    .continue-card img {
+        width: 100%;
+        height: 180px;
+    }
+}
+.download-btn,
+.delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 22px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.download-btn {
+    background: #2E7D32;
+    color: white;
+    text-decoration: none;
+    min-width: 145px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    min-width: 130px;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: #1B5E20;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
+
+.download-btn i,
+.delete-btn i {
+    margin-right: 8px;
+}
+/* ================= LOGIN PAGE BACKGROUND ================= */
+
+.login-page {
+    background: url('../images/backpica_admin.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 350px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #2E7D32;
+}
+
+.login-container inp\ut {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2E7D32;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #1B5E20;
+}
+.upload-form { margin-top: 15px; }
+.submit-btn {
+    background: #1565C0;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.submit-btn:hover { background: #0D47A1; }

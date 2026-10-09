@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LMS REST API</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 18px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 20px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>LMS REST API</h1>
+
+    <button onclick="getData('courses')">Courses</button>
+    <button onclick="getData('students')">Students</button>
+    <button onclick="getData('enrollments')">Enrollments</button>
+    <button onclick="getData('admins')">Admins</button>
+
+    <pre id="result">Select an option...</pre>
+
+    <script>
+
+        function getData(type) {
+
+            fetch("/api/" + type, {
+                headers: {
+                    "Authorization": "Basic " + btoa("admin:admin123")
+                }
+            })
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error("HTTP " + response.status);
+                }
+
+                return response.json();
+            })
+            .then(data => {
+
+                document.getElementById("result").textContent =
+                    JSON.stringify(data, null, 2);
+
+            })
+            .catch(error => {
+
+                document.getElementById("result").textContent =
+                    "Error: " + error.message;
+
+            });
+        }
+
+    </script>
+
+</body>
+</html>
